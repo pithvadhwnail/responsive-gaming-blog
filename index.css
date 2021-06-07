@@ -1,0 +1,328 @@
+/*
+
+<-------COMMON------->
+
+*/
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 1rem;
+  background: #050404;
+  color: #eaeaea;
+  font-weight: 300;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  color: #893168;
+  font-size: 3rem;
+}
+
+h2 {
+  color: #4a1942;
+  font-size: 2rem;
+}
+
+strong {
+  font-weight: 700;
+}
+
+a {
+  color: #893168;
+  transition: all 0.1s;
+}
+
+a:hover,
+a:focus {
+  color: #ba8ea9;
+}
+
+.container-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.about-featured-title {
+  color: #893168;
+}
+
+/*
+
+<-------HEADER------->
+
+*/
+
+header {
+  background: #1a1018;
+  padding: 2em 0;
+  text-align: center;
+  margin-bottom: 2em;
+}
+
+.site-title a {
+  text-decoration: none;
+}
+
+.site-title-title {
+  margin: 0;
+}
+
+.site-title-subtitle {
+  margin-top: 0.25em;
+  margin-bottom: 3em;
+  font-weight: 400;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.menu-item {
+  margin: 0.5em 0;
+}
+
+.menu-anchor {
+  text-decoration: none;
+  color: #893168;
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: all 0.3s;
+}
+
+.menu-anchor:hover,
+.menu-anchor:focus {
+  color: #afafaf;
+}
+
+.current-page {
+  padding: 0.15em 0;
+  border-bottom: 1px solid #893168;
+}
+
+.current-page:hover,
+.current-page:focus {
+  color: #893168;
+}
+
+/*
+
+<-------MAIN-------> 
+
+*/
+
+.article-read-more {
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: aqua;
+  transition: all 0.1s;
+}
+
+.article-read-more:hover,
+.article-read-more:focus {
+  color: cornflowerblue;
+  text-decoration: underline;
+}
+
+.featured,
+.recent {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 1em;
+}
+
+/* featured */
+
+.featured {
+  border-bottom: 2px solid #4a1942;
+  margin-bottom: 4em;
+}
+
+.featured-title {
+  order: -2;
+  margin-bottom: 0.5em;
+}
+
+.featured img {
+  order: -1;
+}
+
+.featured-info {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.featured-content {
+  margin-top: 0;
+}
+
+/* recent */
+
+.recent {
+  margin-bottom: 3em;
+}
+
+.article-recent-secondary {
+  order: -1;
+}
+
+.article-recent-title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/*
+
+<-------ASIDE------->
+
+*/
+
+.about-us,
+.recent-posts {
+  border: 20px solid #893168;
+  margin: 2em 0;
+  padding: 0 1.5em;
+}
+
+/* recent posts */
+
+.recent-posts-content {
+  border-bottom: 1px solid #4a1942;
+  margin-bottom: 1.5em;
+}
+
+.recent-posts-content:last-child {
+  border: 0;
+  margin: 0;
+}
+
+/*
+
+<-------FOOTER------->
+
+*/
+
+footer {
+  background: #1a1018;
+  padding: 5em 0;
+  text-align: center;
+}
+
+.footer-title {
+  color: #893168;
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+.footer-copyright {
+  font-size: 0.8rem;
+  margin-top: 0.25em;
+}
+
+/*
+
+<-------MEDIA QUERIES------->
+
+*/
+
+@media (min-width: 760px) {
+  /* <-------COMMON-------> */
+  .container-flex {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* <-------HEADER-------> */
+  header {
+    margin-bottom: 5em;
+  }
+
+  .site-title {
+    text-align: left;
+  }
+
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .menu-item {
+    margin-left: 2em;
+  }
+
+  /* <-------MAIN-------> */
+  main {
+    width: 70%;
+  }
+
+  aside {
+    width: 25%;
+    min-width: 190px;
+  }
+
+  /* <-------featured-------> */
+  .featured {
+    margin-bottom: 1.5em;
+  }
+
+  .featured-title {
+    order: 0;
+  }
+
+  .featured-info {
+    order: -1;
+  }
+
+  .featured img {
+    order: -2;
+  }
+
+  /* <-------recent-------> */
+
+  .article-recent-main {
+    width: 70%;
+  }
+
+  .article-recent-secondary {
+    width: 28%;
+  }
+
+  .article-recent-secondary img {
+    min-height: 250px;
+    object-fit: cover;
+  }
+
+  .article-recent-info {
+    margin-top: 1.5em;
+  }
+
+  /* <-------ASIDE-------> */
+  .about-us,
+  .recent-posts {
+    margin-top: 0;
+  }
+}
